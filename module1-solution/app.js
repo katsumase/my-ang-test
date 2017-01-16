@@ -33,18 +33,18 @@ function LunchCheckController($scope) {
 
     for (var i = 0; i < arrayofstring.length; i++) {
 
-      if ( arrayofstring[i] != ' ' && arrayofstring[i] != '') { //skipping blanks and nulls
+      if ( arrayofstring[i] != " " && arrayofstring[i] != "") { //skipping blanks and nulls
         count += 1;
-        //console.log( arrayofstring[i] );
+        console.log( arrayofstring[i] );
       }
 
     }
       console.log("Total in array" + " = " + arrayofstring.length + " Total count = " + count);
 
-    if (arrayofstring.length <= 3) {
+    if ( count <= 3) {
       message = "Enjoy!";
     }
-    else if  (arrayofstring.length > 3) {
+    else if  (count > 3) {
       message = "Too much!";
     }
     else {
