@@ -37,7 +37,8 @@ function ShoppingListCheckOffService() {
 
   service.itemsArray = [
     { name : 'Cashews', quantity : 1 }, { name : 'Cookies', quantity : 1 },
-    { name : 'Crisps', quantity : 1 }, { name : 'Peppers', quantity : 1 },{ name : 'Coke', quantity : 1 }
+    { name : 'Crisps', quantity : 1 }, { name : 'Peppers', quantity : 1 },
+    { name : 'Coke', quantity : 1 }
   ];
 
   service.itemsBoughtArray = [];
@@ -59,7 +60,7 @@ function ShoppingListCheckOffService() {
   };
 
   service.removeItem = function (itemIdex) {
-    service.itemsBoughtArray.push( service.itemsArray.splice(itemIdex, 1) );
+    service.itemsBoughtArray.push( service.itemsArray.splice(itemIdex, 1)[0] );
   };
 
 }
